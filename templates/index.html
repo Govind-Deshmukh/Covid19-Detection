@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>COVID-19 Prediction</title>
+</head>
+<body>
+    <h1>COVID-19 Prediction</h1>
+    
+    <form action="{{ url_for('predict') }}" method="POST">
+    
+        <label for="RETURNED_HOME">Returned Home:</label>
+        <input type="text" id="RETURNED_HOME" name="RETURNED_HOME"><br>
+        
+        <label for="INTUBED">Intubed:</label>
+        <input type="text" id="INTUBED" name="INTUBED"><br>
+        
+        <label for="PNEUMONIA">Pneumonia:</label>
+        <input type="text" id="PNEUMONIA" name="PNEUMONIA"><br>
+        
+        <label for="PREGNANT">Pregnant:</label>
+        <input type="text" id="PREGNANT" name="PREGNANT"><br>
+
+        <label for="DIABETES">DIABETES:</label>
+        <input type="text" id="DIABETES" name="DIABETES"><br>
+        
+        <label for="COPD">COPD:</label>
+        <input type="text" id="COPD" name="COPD"><br>
+        
+        <label for="ASTHMA">ASTHMA:</label>
+        <input type="text" id="ASTHMA" name="ASTHMA"><br>
+
+        <label for="INMSUPR">INMSUPR:</label>
+        <input type="text" id="INMSUPR" name="INMSUPR"><br>
+        
+        <label for="HIPERTENSION">HIPERTENSION:</label>
+        <input type="text" id="HIPERTENSION" name="HIPERTENSION"><br>
+
+        <label for="OTHER_DISEASE">OTHER_DISEASE:</label>
+        <input type="text" id="OTHER_DISEASE" name="OTHER_DISEASE"><br>
+        
+        <label for="CARDIOVASCULAR">CARDIOVASCULAR:</label>
+        <input type="text" id="CARDIOVASCULAR" name="CARDIOVASCULAR"><br>
+
+        <label for="OBESITY">OBESITY:</label>
+        <input type="text" id="OBESITY" name="OBESITY"><br>
+
+        <label for="RENAL_CHRONIC">RENAL_CHRONIC:</label>
+        <input type="text" id="RENAL_CHRONIC" name="RENAL_CHRONIC"><br>
+        
+        <label for="TOBACCO">TOBACCO:</label>
+        <input type="text" id="TOBACCO" name="TOBACCO"><br>
+
+        <label for="ICU">ICU:</label>
+        <input type="text" id="ICU" name="ICU"><br>
+        
+        <label for="TEST_RESULT">TEST_RESULT:</label>
+        <input type="text" id="TEST_RESULT" name="TEST_RESULT"><br>
+        
+        <label for="AGE_0-9">AGE_0-9:</label>
+        <input type="text" id="AGE_0-9" name="AGE_0-9"><br>
+
+        <label for="AGE_10-19">AGE_10-19:</label>
+        <input type="text" id="AGE_10-19" name="AGE_10-19"><br>
+
+        <label for="AGE_20-29">AGE_20-29:</label>
+        <input type="text" id="AGE_20-29" name="AGE_20-29"><br>
+        
+        <label for="AGE_30-39">AGE_30-39:</label>
+        <input type="text" id="AGE_30-39" name="AGE_30-39"><br>
+
+        <label for="AGE_40-49">AGE_40-49:</label>
+        <input type="text" id="AGE_40-49" name="AGE_40-49"><br>
+
+        <label for="AGE_50-59">AGE_50-59:</label>
+        <input type="text" id="AGE_50-59" name="AGE_50-59"><br>
+
+        <label for="AGE_60-69">AGE_60-69:</label>
+        <input type="text" id="AGE_60-69" name="AGE_60-69"><br>
+
+        <label for="AGE_70-79">AGE_70-79:</label>
+        <input type="text" id="AGE_70-79" name="AGE_70-79"><br>
+
+        <label for="AGE_80-89">AGE_80-89:</label>
+        <input type="text" id="AGE_80-89" name="AGE_80-89"><br>
+
+        <label for="AGE_OVER_90">AGE_OVER_90:</label>
+        <input type="text" id="AGE_OVER_90" name="AGE_OVER_90"><br>
+
+        <label for="WOMAN">WOMAN:</label>
+        <input type="text" id="WOMAN" name="WOMAN"><br>
+
+        <label for="MAN">MAN:</label>
+        <input type="text" id="MAN" name="MAN"><br>
+    
+        <!-- Repeat the above label and input elements for the remaining columns -->
+        
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
